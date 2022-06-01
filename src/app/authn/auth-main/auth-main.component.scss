@@ -1,0 +1,11 @@
+.inner-box {
+  // margin: 5px;
+  background: white;
+  border-radius: 20px;
+}
+.inner-box:nth-of-type(1){
+  background-color: black;
+}
+.row{
+  height: 100%
+}

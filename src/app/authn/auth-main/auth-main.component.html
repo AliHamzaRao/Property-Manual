@@ -1,0 +1,8 @@
+<div nz-row  class="row" [nzGutter]="0" style="padding: 5px;">
+  <div nz-col class="gutter-row inner-box" [nzSpan]="12">
+    <button nz-button [type]="'default'" style="padding: 7px 70px; margin: 20px 10%;">LOGO</button>
+    <h1 nz-typography style="color: white; margin-left: 10%; margin-bottom: 100px;">Be The Master<br>of your home  </h1>
+    <img nz-image style="margin-left: 10%;" width="40%" height="40%" nzSrc="error" [nzFallback]="fallback" alt="" />
+  </div>
+  <div nz-col class="gutter-row inner-box" [nzSpan]="12"><router-outlet></router-outlet></div>
+</div>

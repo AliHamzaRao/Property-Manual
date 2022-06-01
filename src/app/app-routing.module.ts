@@ -4,7 +4,7 @@ import { AuthenticationPaths } from './authn/auth-const';
 
 const routes: Routes = [
   {
-    path: AuthenticationPaths.login,
+    path: "auth",
     loadChildren: () => import('./authn/authn.module').then(m => m.AuthnModule)
   },
 {

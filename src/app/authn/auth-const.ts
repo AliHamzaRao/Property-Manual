@@ -1,25 +1,25 @@
 
-export const LoginActions = {
-   
-    
+export const AuthenticationActions = {
+    base:'auth',
     login: 'login',
-    
+    verifyemail: 'verifyemail',
+    verifiedemail: 'verifiedemail',
   };
 
   let authenticationPaths: AuthenticationPathsType = {
-   
-    login: `${LoginActions.login}`,
-    
+    login: `${AuthenticationActions.login}`,
+    verifyemail: `${AuthenticationActions.verifyemail}`,
+    verifiedemail: `${AuthenticationActions.verifiedemail}`,
   };
 
 interface AuthenticationPathsType {
-    
     readonly login: string;
-    
-  }
+    readonly verifyemail : string,
+    readonly verifiedemail : string
+}
 
- 
 
-  
 
-  export const AuthenticationPaths: AuthenticationPathsType = authenticationPaths;
+
+
+export const AuthenticationPaths: AuthenticationPathsType = authenticationPaths;
