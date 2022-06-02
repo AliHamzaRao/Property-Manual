@@ -14,8 +14,11 @@ import { MainComponent } from './auth-main/main/main.component';
 import { LoginComponent } from './auth-main/login/login.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { SignUpComponent } from './auth-main/sign-up/sign-up.component';
 import { VerifyEmailComponent } from './auth-main/verify-email/verify-email.component';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { VerifyEmailComponent } from './auth-main/verify-email/verify-email.comp
     AuthenticationRoutingModule,
     ReactiveFormsModule,
     NzInputModule,
-    NzIconModule
+    NzIconModule,
+    NzLayoutModule,
+    NzDividerModule,
+    NzButtonModule
   ]
 })
 export class AuthnModule { }

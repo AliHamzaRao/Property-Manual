@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   validateForm!: FormGroup;
-
+  passwordVisible:boolean=false
   submitForm(): void {
     if (this.validateForm.valid) {
       console.log('submit', this.validateForm.value);

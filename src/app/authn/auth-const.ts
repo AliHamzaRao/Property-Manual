@@ -1,6 +1,6 @@
 
 export const AuthenticationActions = {
-    base:'',
+    base:'auth',
     login: 'login',
     verifyemail: 'verifyemail',
     verifiedemail: 'verifiedemail',
@@ -8,10 +8,10 @@ export const AuthenticationActions = {
   };
 
   let authenticationPaths: AuthenticationPathsType = {
-    login: `${AuthenticationActions.login}`,
-    verifyemail: `${AuthenticationActions.verifyemail}`,
-    verifiedemail: `${AuthenticationActions.verifiedemail}`,
-    signup :`${AuthenticationActions.signup}`
+    login: `${AuthenticationActions.base+'/'+AuthenticationActions.login}`,
+    verifyemail: `${AuthenticationActions.base+'/'+AuthenticationActions.verifyemail}`,
+    verifiedemail: `${AuthenticationActions.base+'/'+AuthenticationActions.verifiedemail}`,
+    signup :`${AuthenticationActions.base+'/'+AuthenticationActions.signup}`
   };
 
 interface AuthenticationPathsType {
