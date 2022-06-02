@@ -1,0 +1,89 @@
+<form nz-form [nzLayout]="'vertical'" [formGroup]="validateForm">
+<h1>Sign Up</h1>
+<p nz-paragraph nzType="secondary">Lets get started by creating amazing account</p>
+<nz-form-item  nzJustify="center">
+<button
+  nz-button
+  class="login-form-button login-form-margin"
+  nzType="default"
+>
+  <i nz-icon nzType="google"></i>
+  Sign up with Google
+</button>
+</nz-form-item>
+<nz-form-item  nzJustify="center">
+<button
+  nz-button
+  class="login-form-button login-form-margin"
+  nzType="default"
+>
+  <i nz-icon nzType="apple"></i>
+  Sign up with Apple
+</button>
+</nz-form-item>
+<nz-divider nzText="OR"></nz-divider>
+<!-- <ng-container> -->
+<!-- </ng-container> -->
+  <nz-form-item  nzJustify="center">
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzRequired nzFor="email"
+      >E-mail</nz-form-label
+    >
+    <nz-form-control
+      nzErrorTip="The input is not valid E-mail!"
+    >
+      <input nz-input formControlName="email" id="email" />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item  >
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired
+      >Password</nz-form-label
+    >
+    <nz-form-control
+      nzErrorTip="Please input your password!"
+    >
+      <input
+        nz-input
+        type="password"
+        id="password"
+        formControlName="password"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item >
+    <nz-form-label [nzXs]="24" nzFor="checkPassword" nzRequired
+      >Confirm Password</nz-form-label
+    >
+    <nz-form-control [nzErrorTip]="errorTpl">
+      <input
+        nz-input
+        type="password"
+        formControlName="checkPassword"
+        id="checkPassword"
+      />
+      <ng-template #errorTpl let-control>
+        <ng-container *ngIf="control.hasError('required')"
+          >Please confirm your password!</ng-container
+        >
+        <ng-container *ngIf="control.hasError('confirm')">
+          Two passwords that you enter is inconsistent!
+        </ng-container>
+      </ng-template>
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item  class="register-area">
+    <nz-form-control>
+      <label nz-checkbox formControlName="agree">
+        <span>
+          Already have an account?
+          <a routerLink="/auth/login">Login</a>
+        </span>
+      </label>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item  class="register-area">
+    <nz-form-control>
+      <button nz-button class="darkBtn">Create</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

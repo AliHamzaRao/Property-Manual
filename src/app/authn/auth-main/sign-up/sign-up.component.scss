@@ -1,0 +1,46 @@
+[nz-form]{
+  // border: 1px solid black
+  max-width: 80%;
+  margin: 0 auto;
+}
+.login-form-button{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+  .ant-form-item{
+    margin: 0px 10px;
+  }
+  .phone-select {
+    width: 70px;
+  }
+
+  .register-are {
+    margin-bottom: 8px;
+  }
+  h1,h2,h3,h4,h5,h6{
+    margin: 0;
+  }
+nz-form-item{
+  margin-bottom: 0.6rem !important;
+  nz-form-label{
+    font-weight: bold;
+    label{
+      color: grey !important;
+    }
+  }
+  label{
+    color: grey;
+  }
+input,button{
+  border-radius: 10px;
+  height: 40px;
+}
+}
+
+.darkBtn{
+  background-color: black;
+  color:white;
+  font-size: 1rem;
+  padding: 0px 50px;
+  font-weight: 500;
+}
