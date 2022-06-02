@@ -1,22 +1,32 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthenticationPaths } from './auth-const';
-import { AuthMainComponent } from './auth-main/auth-main.component';
+import { AuthComponent } from './auth-main/auth.component';
+import { EmailVerifiedComponent } from './auth-main/email-verified/email-verified.component';
 import { LoginComponent } from './auth-main/login/login.component';
 import { VerifyEmailComponent } from './auth-main/verify-email/verify-email.component';
-import { EmailVerifiedComponent } from './auth-main/email-verified/email-verified.component';
+import { MainComponent } from './auth-main/main/main.component';
 
 
 export const routes: Routes = [
+    // {
+    //   path: "",
+    //   redirectTo: AuthenticationPaths.login,
+    //   pathMatch: 'full'
+    //},
+    // {
+    //   path: "**",
+    //   redirectTo: '',
+    //   pathMatch: 'full'
+    // },
     {
       path: "",
-      redirectTo: AuthenticationPaths.login,
-      pathMatch: 'full'
-    },
-    {
-      path: "",
-      component:AuthMainComponent,
+      component:AuthComponent,
       children:[
+        {
+          path:'',
+          component:MainComponent
+        },
         {
           path:AuthenticationPaths.login,
           component:LoginComponent
@@ -31,8 +41,6 @@ export const routes: Routes = [
         }
       ]
     },
-
-
 ];
 
 @NgModule({

@@ -1,19 +1,25 @@
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationPaths } from './authn/auth-const';
 
 const routes: Routes = [
   {
+    path: "",
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+  },
+  {
     path: "auth",
     loadChildren: () => import('./authn/authn.module').then(m => m.AuthnModule)
   },
-{
-    path: '**', redirectTo: ''
-  }
-
-
-
-
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch:'full'
+  },
+  // {
+  //   path: '**', redirectTo: ''
+  // },
 ];
 
 @NgModule({

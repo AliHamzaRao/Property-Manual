@@ -1,6 +1,6 @@
 
 export const AuthenticationActions = {
-    base:'auth',
+    base:'',
     login: 'login',
     verifyemail: 'verifyemail',
     verifiedemail: 'verifiedemail',
