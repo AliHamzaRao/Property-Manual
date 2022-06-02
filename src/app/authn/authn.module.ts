@@ -13,12 +13,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MainComponent } from './auth-main/main/main.component';
 import { LoginComponent } from './auth-main/login/login.component';
 import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { VerifyEmailComponent } from './auth-main/verify-email/verify-email.component';
 
 @NgModule({
   declarations: [
     AuthComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent,
+    VerifyEmailComponent
   ],
   imports: [
     CommonModule,
@@ -32,6 +37,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
     AuthenticationRoutingModule,
     ReactiveFormsModule,
     NzInputModule,
+    NzIconModule
   ]
 })
 export class AuthnModule { }

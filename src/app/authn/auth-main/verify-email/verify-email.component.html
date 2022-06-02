@@ -1,3 +1,20 @@
-<p>
-  verify-email works!
-</p>
+<h1>Check your Email</h1>
+<div>Enter verification code sent to Email</div>
+<div>to verify account</div>
+
+
+<form id="form-otp-verification" class="form-group text-left" style="margin: 10px 0;">
+  <label class="control-label" style="margin-bottom: 5px;" for="otpDigit">Type your -digit security code
+    here:</label>
+    <div nz-col [nzSpan]="12">
+      <input style="width:2rem; margin:0.5rem" nz-input formControlName="captcha" id="captcha" />
+      <input style="width:2rem; margin:0.5rem" nz-input formControlName="captcha" id="captcha" />
+      <input style="width:2rem; margin:0.5rem" nz-input formControlName="captcha" id="captcha" />
+      <input style="width:2rem; margin:0.5rem" nz-input formControlName="captcha" id="captcha" />
+    </div>
+  <br/>
+  <br/>
+  <button  type="submit" id="SubmitOTP" name="SubmitOTP" class="btn btn-dark btn-block mt-10 mb-5">
+    Verify
+  </button>
+</form>

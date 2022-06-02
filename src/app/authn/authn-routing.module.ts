@@ -6,6 +6,7 @@ import { EmailVerifiedComponent } from './auth-main/email-verified/email-verifie
 import { LoginComponent } from './auth-main/login/login.component';
 import { VerifyEmailComponent } from './auth-main/verify-email/verify-email.component';
 import { MainComponent } from './auth-main/main/main.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 
 export const routes: Routes = [
@@ -38,6 +39,10 @@ export const routes: Routes = [
         {
           path:AuthenticationPaths.verifiedemail,
           component:EmailVerifiedComponent
+        },
+        {
+          path:AuthenticationPaths.signup,
+          component:SignUpComponent
         }
       ]
     },
